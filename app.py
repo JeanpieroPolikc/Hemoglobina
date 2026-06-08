@@ -90,9 +90,8 @@ if len(df) > 0:
 def categorizar_edad(edad):
     if 5 <= edad <= 11: return "Niños (5–11 años)"
     elif 12 <= edad <= 29: return "Adolescentes/Jóvenes (12–29 años)"
-    elif 38 <= edad <= 59: return "Adultos (38–59 años)"
+    elif 30 <= edad <= 59: return "Adultos (30–59 años)"
     elif edad >= 60: return "Adultos Mayores (60 años a más)"
-    else: return "Otros (No incluidos)"
 
 if len(df) > 0:
     df["Grupo_Edad"] = df["Edad"].apply(categorizar_edad)
@@ -100,7 +99,7 @@ if len(df) > 0:
 grupos_edad_fijos = [
     "Niños (5–11 años)", 
     "Adolescentes/Jóvenes (12–29 años)", 
-    "Adultos (38–59 años)", 
+    "Adultos (30–59 años)", 
     "Adultos Mayores (60 años a más)",
     "Otros (No incluidos)"
 ]
